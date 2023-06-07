@@ -10,9 +10,12 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    container:
-      image: node:lts-alpine3.18
+    #runs-on: ubuntu-latest
+    runs-on: shr-1
+    #container:
+    #  image: node:lts-alpine3.18
     steps:
-      - name: check node version
-        run: node --version
+      #- name: check node version
+      #  run: node --version
+      - name: Hello
+        run: echo hello
