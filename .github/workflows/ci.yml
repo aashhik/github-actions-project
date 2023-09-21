@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - branch1
   # pull_request:
   #   branches:
   #     - main
@@ -18,7 +19,10 @@ jobs:
     steps:
       #- name: check node version
       #  run: node --version
-      - name: Hello
+      - name: Print github predefined variables
         run: |
           echo hello
-          echo ${{  github.head_ref  }}
+          echo $GITHUB_REF
+          echo $GITHUB_REF_NAME
+          echo $GITHUB_HEAD_REF
+          echo $GITHUB_BASE_REF
