@@ -4,19 +4,21 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+  # pull_request:
+  #   branches:
+  #     - main
   workflow_dispatch:
 
 jobs:
   build:
-    #runs-on: ubuntu-latest
-    runs-on: shr-1
+    runs-on: ubuntu-latest
+    #runs-on: shr-1
     #container:
     #  image: node:lts-alpine3.18
     steps:
       #- name: check node version
       #  run: node --version
       - name: Hello
-        run: echo hello
+        run: |
+          echo hello
+          echo ${{  github.head_ref  }}
