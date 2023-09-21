@@ -1,10 +1,10 @@
 name: test github actions
 
 on:
-  push:
-    branches:
-      - main
-      - branch1
+  # push:
+  #   branches:
+  #     - main
+  #     - branch1
   pull_request:
     branches:
       - main
