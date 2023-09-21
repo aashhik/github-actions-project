@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - branch1
   # pull_request:
   #   branches:
   #     - main
@@ -21,4 +22,4 @@ jobs:
       - name: Hello
         run: |
           echo hello
-          echo ${{  github.head_ref  }}
+          echo $GITHUB_JOB
