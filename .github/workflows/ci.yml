@@ -1,13 +1,11 @@
 name: test github actions
 
 on:
-  # push:
-  #   branches:
-  #     - branch1
-  #     - main
-  pull_request:
+  push:
     branches:
       - branch1
+  pull_request:
+    branches:
       - main
   workflow_dispatch:
 
